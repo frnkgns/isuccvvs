@@ -18,13 +18,7 @@
         if($execute){
             if(mysqli_num_rows($execute) > 0) {
                 echo "<script>alert('Candidate Record Exist!');</script>";
-                $row = mysqli_fetch_assoc($execute);
-                echo $row['studentid'];
-                echo $row['position'];
-                echo $row['name'];
-                echo $row['college'];
-                echo $row['course'];
-                
+    
             } else {
                 echo "<script>alert('Candidate Record Doesn\'t Exist!');</script>";
             }
@@ -36,7 +30,7 @@
 
     } else {
         echo "<script>alert('You didn't input anything');</script>";
-    }
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +44,7 @@
 <body>
 
     <!-- using the action= navigates you into another php and send request -->
-    <form action="FormUpdate.php" method="post" id="formdelete">
+    <form action="FormUpdate.php" method="post" id="formupdate" onsubmit="return validateForm()">
         <div class="delete-div">
             <div class="delete-form">
                 <p id="info" class="title addbx ">Please enter student id to proceed</p>

@@ -14,10 +14,12 @@
         $query = "delete from candidates where studentid = '$studentid'";
         $execute = mysqli_query($con, $query);
 
-        if(mysqli_query($con, $query) <= 0) {
-            echo "<script>alert('Candidate Record Doesn\'t Exist!');</script>";
-        } else {
+        //let's check if the query returns a row or a query really deleted a record
+        //if query didn't delete a record or doens't work, it means that query doesn't find a record
+        if(mysqli_affected_rows($con) > 0) {
             echo "<script>alert('Candidate Record Deleted!');</script>";
+        } else {
+            echo "<script>alert('Candidate Record Doesn\'t Exist!');</script>";
         }
 
     } else {
@@ -37,8 +39,8 @@
     <form method="post" id="formdelete">
         <div class="delete-div">
             <div class="delete-form">
-                <p id="info" class="title addbx ">You can't undo the record once you've deleted</p>
-                <input id="dlt_cnddt" class="dlt_cnddt inputbx " placeholder="Enter Student ID" name="studentid">
+                <p id="info" class="title addbx ">Enter Student ID to proceed <br><br><a style="color: red;">Note: You can't undo the deleted record.<a></p>
+                <input id="dlt_cnddt" class="dlt_cnddt inputbx " placeholder="XX-XXXX" name="studentid">
                 <div class="btn-div">
                     <input type="submit" class="submitbx inputbx" value="Submit">
                     <input class="backbtn" onclick="window.location.href= 'admin.php'" value="Back">

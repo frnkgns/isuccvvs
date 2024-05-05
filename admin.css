@@ -12,19 +12,19 @@ body{
     width: 300px;
 }
 
-.btn{
+.btn1{
     font-size: 20px;
     font-family: sans-serif;
     height: 50px;
     width: 300px;
     border-radius: 10px;
     border-color: transparent;
-    background-color: white;
     margin: 0 0 30px 0;
 }
 
-.btn:hover{
-    background-color: darkgray;
+.btn1:hover, .w:hover{
+    color: black;
+    background-color: white;
 }
 
 .inputbx{
