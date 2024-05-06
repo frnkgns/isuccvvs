@@ -50,8 +50,8 @@
                 <p id="info" class="title addbx ">Please enter student id to proceed</p>
                 <input id="dlt_cnddt" class="dlt_cnddt inputbx " placeholder="XX-XXXXX" name="findstudentid">
                 <div class="btn-div">
-                    <input type="submit" class="submitbx inputbx" value="Submit">
-                    <input class="backbtn" onclick="window.location.href= 'admin.php'" value="Back">
+                    <input type="submit" class="submitbx inputbx" value="Submit" style="cursor: pointer;">
+                    <input class="backbtn" onclick="window.location.href= 'admin.php'" value="Back" style="cursor: pointer;">
                 </div>
             </div>
         </div>

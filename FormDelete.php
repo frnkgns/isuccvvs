@@ -42,8 +42,8 @@
                 <p id="info" class="title addbx ">Enter Student ID to proceed <br><br><a style="color: red;">Note: You can't undo the deleted record.<a></p>
                 <input id="dlt_cnddt" class="dlt_cnddt inputbx " placeholder="XX-XXXX" name="studentid">
                 <div class="btn-div">
-                    <input type="submit" class="submitbx inputbx" value="Submit">
-                    <input class="backbtn" onclick="window.location.href= 'admin.php'" value="Back">
+                    <input type="submit" class="submitbx inputbx" value="Submit" style="cursor: pointer;">
+                    <input class="backbtn" onclick="window.location.href= 'admin.php'" value="Back" style="cursor: pointer;">
                 </div>
             </div>
         </div>

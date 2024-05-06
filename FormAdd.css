@@ -38,6 +38,10 @@ body{
     color: white;
 }
 
+.backbtn, .submitbx, .addbx{
+    cursor: pointer;
+}
+
 .backbtn:hover{
     color: black;
     background-color: lightblue;
