@@ -5,6 +5,7 @@
 
     include("db.php");
     $adminhtml = "admin.php";
+    $votingarea = "main.php";
     
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $logincodes = $_POST['entercode'];
@@ -18,8 +19,14 @@
 
             if ($college == "admin") {
                 echo "<script>window.location.href='$adminhtml';</script>";
+            } else if($college == "sas" || $college == "ccsict" || $college == "ps" || $college == "iat" || $college == "ced" || $college == "cbm" || $college == "crim"){
+                echo "<script>window.location.href='$votingarea';</script>";
 
-            } 
+            } else {
+                echo "<script>alert('Log in code is not registered');</script>";
+                echo "<script>window.location.href='index.php';</script>";
+            }
+
         } else {
             echo "<script type='text/javascript'> alert('Couldn't Connect') </script>";
         }
